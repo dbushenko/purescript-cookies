@@ -1,6 +1,6 @@
 {
   "name": "purescript-cookies",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Cookies manipulation library for purescript 0.7.4 and higher",
   "homepage": "https://github.com/dbushenko/purescript-cookies",
   "authors": [
