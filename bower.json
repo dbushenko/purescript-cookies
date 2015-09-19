@@ -1,0 +1,30 @@
+{
+  "name": "purescript-cookies",
+  "homepage": "https://github.com/dbushenko/purescript-cookies",
+  "description": "Cookies manipulation library for purescript 0.7.4 and higher",
+  "license": "MIT",
+  "authors": [
+    "Dmitry Bushenko <d.bushenko@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "purescript"
+  ],
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "tests",
+    "tmp",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-eff": "latest"
+  },
+  "devDependencies": {
+  }
+}
