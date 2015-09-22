@@ -2,6 +2,7 @@ module Web.Cookies (
            setCookie
          , getCookie
          , deleteCookie
+         , COOKIE (..)
          ) where
 
 import Prelude
