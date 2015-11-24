@@ -22,6 +22,7 @@
     "tests"
   ],
   "dependencies": {
-    "purescript-eff": "latest"
+    "purescript-eff": "latest",
+    "purescript-maybe": "~0.3.5"
   }
 }

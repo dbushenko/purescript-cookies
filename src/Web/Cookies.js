@@ -39,13 +39,19 @@ exports.setCookie =
     }
 
 // возвращает cookie с именем name, если есть, если нет, то undefined
-exports.getCookie =
+exports._getCookie =
     function(name) {
         return function() {
             var matches = document.cookie.match(new RegExp(
                 "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
             ));
-            return matches ? decodeURIComponent(matches[1]) : undefined;
+            var data = matches ? decodeURIComponent(matches[1]) : undefined;
+
+            if (data == undefined || data == null) {
+                return [];
+            } else {
+                return [data];
+            }
         };
     }
 

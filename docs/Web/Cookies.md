@@ -1,5 +1,11 @@
 ## Module Web.Cookies
 
+#### `COOKIE`
+
+``` purescript
+data COOKIE :: !
+```
+
 #### `setCookie`
 
 ``` purescript
@@ -11,10 +17,8 @@ Set cookie with specified name and value. Last argument (opts) is a map of optio
 #### `getCookie`
 
 ``` purescript
-getCookie :: forall eff value. String -> Eff (cookie :: COOKIE | eff) value
+getCookie :: forall eff value. String -> Eff (cookie :: COOKIE | eff) (Maybe value)
 ```
-
- Get cookie with specified name
 
 #### `deleteCookie`
 
