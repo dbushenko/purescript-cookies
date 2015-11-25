@@ -58,8 +58,6 @@ exports._getCookie =
 // удаляем вызовом setCookie с датой в прошлом
 exports.deleteCookie = function(name) {
     return function() {
-        setCookie(name, "", {
-            expires: -1
-        })
+        exports.setCookie(name)("")({expires: -1})();
     };
 }
