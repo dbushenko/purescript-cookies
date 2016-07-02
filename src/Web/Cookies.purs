@@ -6,8 +6,9 @@ module Web.Cookies (
          ) where
 
 import Prelude
-import Control.Monad.Eff
-import Data.Maybe
+import Control.Monad.Eff (Eff)
+import Data.Array (uncons)
+import Data.Maybe (Maybe(Just, Nothing))
 
 foreign import data COOKIE :: !
 
@@ -21,8 +22,9 @@ getCookie :: forall eff value. String -> Eff (cookie :: COOKIE | eff) (Maybe val
 getCookie key = do
     cook <- _getCookie key
     prepare cook
-    where prepare [] = return Nothing
-          prepare [value] = return $ Just value
+    where prepare arr = case uncons arr of
+            Just { head: value } -> pure $ Just value
+            Nothing -> pure Nothing
 
 -- |  Delete cookie with specified name
 foreign import deleteCookie :: forall eff. String -> Eff (cookie :: COOKIE | eff) Unit
