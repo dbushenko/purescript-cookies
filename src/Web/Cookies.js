@@ -2,7 +2,7 @@
 // module Web.Cookies
 
 // https://learn.javascript.ru/cookie
-exports.setCookie =
+exports._setCookie =
     function(name) {
         return function(value) {
             return function(options) {
@@ -27,12 +27,16 @@ exports.setCookie =
                     for (var propName in options) {
                         updatedCookie += "; " + propName;
                         var propValue = options[propName];
+                        // if (propName === "expires") {
+                        //     updatedCookie += "=" + propValue.toUTCString();
+                        // } else
                         if (propValue !== true) {
                             updatedCookie += "=" + propValue;
                         }
                     }
 
-                    document.cookie = updatedCookie;
+                    //document.cookie = updatedCookie;
+                    console.log(updatedCookie)
                 };
             };
         };

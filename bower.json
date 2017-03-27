@@ -1,7 +1,7 @@
 {
   "name": "purescript-cookies",
-  "version": "0.2.0",
-  "description": "Cookies manipulation library for purescript 0.7.4 and higher",
+  "version": "0.3.0",
+  "description": "Cookies manipulation library for purescript 0.10.x",
   "homepage": "https://github.com/dbushenko/purescript-cookies",
   "authors": [
     "dbushenko <d.bushenko@gmail.com>"
@@ -22,7 +22,13 @@
     "tests"
   ],
   "dependencies": {
-    "purescript-eff": "latest",
-    "purescript-maybe": "~2.0.0"
+    "purescript-eff": "2.5.0",
+    "purescript-maybe": "~2.1.1",
+    "purescript-options": "^2.0.0",
+    "purescript-js-date": "^3.0.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^2.0.0",
+    "purescript-spec": "^0.12.4"
   }
 }
