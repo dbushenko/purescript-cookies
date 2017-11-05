@@ -11,14 +11,13 @@ module Web.Cookies (
          ) where
 
 import Prelude
-import Control.Monad.Eff (Eff)
+import Control.Monad.Eff (Eff, kind Effect)
 import Data.Maybe (Maybe(..))
-import Data.Options
-import Data.JSDate
-import Data.JSDate (JSDate(..))
+import Data.Options (Option, Options, opt)
+import Data.JSDate (JSDate)
 
-foreign import data COOKIE :: !
-foreign import data CookiesOptions :: *
+foreign import data COOKIE :: Effect
+foreign import data CookiesOptions :: Type
 
 -- Following are the available cookies options
 --
