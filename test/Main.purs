@@ -1,6 +1,6 @@
 module Test.Main where
 
-import Prelude (bind, ($), (<<<), (<>), Unit)
+import Prelude (discard, ($), (<<<), (<>), Unit)
 import Web.Cookies
 import Data.Options (options, (:=))
 import Data.DateTime (DateTime(..), Month(..), Time(..), canonicalDate)

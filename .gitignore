@@ -1,0 +1,7 @@
+# Purescript artifact directories
+**/bower_components
+**/node_modules/
+**/.pulp-cache/
+**/output
+**/.psc*
+**/.psa*
